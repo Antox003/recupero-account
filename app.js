@@ -1,5 +1,5 @@
-setCookie("imagine", "./img/Instagram-Logo-scritta.png", 1);
-console.log(getCookie("nome"))
+setCookie("immagine", "./img/Instagram-Logo-scritta.png", 1);
+console.log(getCookie("immagine"))
 
 function setCookie(cname,cvalue,exdays) {
   const d = new Date();
