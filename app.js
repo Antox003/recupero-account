@@ -22,7 +22,6 @@ function getCookie(cname) {
 }
 
 
-setCookie("data", password, 1);
-console.log(getCookie("data"))
+
 setCookie("nome", "ciao", 1);
 console.log(getCookie("nome"))
