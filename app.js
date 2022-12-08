@@ -1,22 +1,21 @@
 
-setCookie("data", "25/12/2021", 1);
+//setCookie("data", "25/12/2021", 1);
+//console.log(getCookie("data"))
 
-console.log(getCookie("data"))
-var lol="ciao";
-console.log(lol);
 
-function setCookie(cname, cvalue, exdays) {
+function setCookie(cname,cvalue,exdays) {
   const d = new Date();
-  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-  var expires = "expires="+d.toUTCString();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires=" + d.toUTCString();
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
-  
+
 function getCookie(cname) {
-  var name = cname + "=";
-  var ca = document.cookie.split(';');
-  for(var i = 0; i < ca.length; i++) {
-    var c = ca[i];
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
     while (c.charAt(0) == ' ') {
       c = c.substring(1);
     }
@@ -25,4 +24,16 @@ function getCookie(cname) {
     }
   }
   return "";
+}
+
+function checkCookie() {
+  let user = getCookie("username");
+  if (user != "") {
+    alert("Welcome again " + user);
+  } else {
+     user = prompt("Please enter your name:","");
+     if (user != "" && user != null) {
+       setCookie("username", user, 30);
+     }
+  }
 }
