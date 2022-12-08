@@ -1,4 +1,4 @@
-setCookie("imagine", "./img", 1);
+setCookie("imagine", "./img/Instagram-Logo-scritta.png", 1);
 console.log(getCookie("nome"))
 
 function setCookie(cname,cvalue,exdays) {
