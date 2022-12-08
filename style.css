@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background: #F2F3F5;
+    height: auto;
+}
+
+#navbar{
+    background-color: white;
+    border-bottom: rgb(219, 218, 218) 1px solid ;
+}
+
+
+#navbar nav .instagram img{
+    max-width: 10%;
+    padding-left: 10rem;
+}
+
+#box{
+    display: flex;
+    justify-content: center;
+    padding-top: 5rem;
+    height: auto;
+}
+
+#box .container{
+    text-align: center;
+    width: 400px;
+    background: white;
+    border: rgb(219, 218, 218) 1px solid;
+}
+
+#box .logo{
+    padding-top: 1rem;
+}
+
+#box .logo h4{
+   color:black
+}
+
+#box .logo .container-paragraph {
+    display: flex;
+    justify-content: center;
+}
+
+#box .logo .container-paragraph p{
+   font-size: 14px;
+   color: gray;
+   padding-bottom: 1rem;
+   padding-top: 1rem;
+   width: 350px;
+}
+
+#box .dates input{
+    font-family: 'Open Sans', sans-serif;
+    color:black;
+    width: 300px;
+    height: 35px;
+    border: rgb(175, 173, 173) 0.7px solid;
+    border-radius: 5px;
+}
+
+#box .dates button{
+    width: 300px;
+    height: 35px;
+    background-color: #0095F6;
+    border: none;
+    border-radius: 5px;
+}
+
+#box .dates button h4{
+    color: white;
+}
+
+#box .container .dates label a{
+    text-decoration: none;
+    color: #00376B;
+    font-size: 13px;
+}
+
+#box .container .dates a{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-style: bold;
+}
+
+#box .container .dates .riga{
+  display: flex;
+  justify-content: space-around;
+}
+
+#box .container .dates .riga .uno{
+    width: 100px;
+}
+
+#box .container .dates .riga .tre{
+    width: 100px;
+}
+
+#box .container .dates .account{
+    background: #FAFAFA;
+    border: rgb(219, 218, 218) 1px solid;
+    height: 45px;
+}
+
+#box .container .dates .account h4{
+   padding-top: 0.7rem;
+}
+
+#contatti{
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+
+}
+
+#contatti .container_contatti {
+    text-align: center;
+    width: 1200px;
+}
+
+#contatti .container_contatti a{
+    text-decoration: none;
+    color: #8E8E8E;
+    padding-left: 0.5rem;
+    font-size: 14px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 5rem;
+}
+
+footer p{
+    color: #8E8E8E;
+    font-size: 14px;
+}
