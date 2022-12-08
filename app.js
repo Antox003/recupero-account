@@ -23,5 +23,5 @@ function getCookie(cname) {
 
 function assegna(){
   setCookie("password", password, 1);
-console.log(getCookie("password"))
+  console.log(getCookie("password"))
 }
