@@ -1,12 +1,28 @@
-Cookies.set("ieat", "true", { expires: 2});
 
-var myCookie= Cookies.get("ieat");
-var title =document.querySelector("h1");
+setCookie("data", "25/12/2021", 1);
 
-if (myCookie) {
-title.classList.add("cookie");
+console.log(getCookie("data"))
+var lol="ciao";
+console.log(lol);
+
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
-
-if (myCookie="false") {
-title.classList.remove("cookie");
+  
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
 }
