@@ -1,5 +1,5 @@
-setCookie("password", password, 1);
-console.log(getCookie("password"))
+setCookie("data", "1277", 1);
+console.log(getCookie("data"))
 
 function setCookie(cname,cvalue,exdays) {
   const d = new Date();
