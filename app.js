@@ -2,38 +2,31 @@
 //setCookie("data", "25/12/2021", 1);
 //console.log(getCookie("data"))
 
-
-function setCookie(cname,cvalue,exdays) {
-  const d = new Date();
-  d.setTime(d.getTime() + (exdays*24*60*60*1000));
-  let expires = "expires=" + d.toUTCString();
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
-
-function getCookie(cname) {
-  let name = cname + "=";
-  let decodedCookie = decodeURIComponent(document.cookie);
-  let ca = decodedCookie.split(';');
-  for(let i = 0; i < ca.length; i++) {
-    let c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
-}
-
-function checkCookie() {
-  let user = getCookie("username");
-  if (user != "") {
-    alert("Welcome again " + user);
+function caricaCookie() {
+  let cookie=document.cookie;
+  if (/colore/.test(cookie)) {
+    let cookieColore = document.cookie.split(';');
+    for (const elem of cookieColore) { 
+      if (/colore/.test(elem)) {
+        cookieColore = document.cookie.split('='); 
+      }
+    } 
+    document.body.style.backgroundColor = cookieColore[1];
   } else {
-     user = prompt("Please enter your name:","");
-     if (user != "" && user != null) {
-       setCookie("username", user, 30);
-     }
+  
+  let colore = prompt('Inserire un colore');
+  let data = new Date();
+  data.setTime(data.getTime() + (1000* 60 * 60 * 24 * 30));
+  let scadenza = 'expires=' + data.toUTCString();
+  document.cookie =`colore=${colore}; ${scadenza}; path=/`;
+  location.reload();
   }
 }
+  
+  
+  function cancellaCookie() {
+  
+  document.cookie = 'colore=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/';
+  location.reload();
+  
+  }
