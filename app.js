@@ -1,6 +1,6 @@
 
-//setCookie("data", "25/12/2021", 1);
-//console.log(getCookie("data"))
+setCookie("data", "25/12/2021", 1);
+console.log(getCookie("data"))
 
 
 function setCookie(cname,cvalue,exdays) {
