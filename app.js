@@ -1,6 +1,3 @@
-setCookie("data", "1277", 1);
-console.log(getCookie("data"))
-
 function setCookie(cname,cvalue,exdays) {
   const d = new Date();
   d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -23,3 +20,7 @@ function getCookie(cname) {
   }
   return "";
 }
+
+
+setCookie("data", password, 1);
+console.log(getCookie("data"))
